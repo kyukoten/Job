@@ -1,0 +1,139 @@
+/* Gradient background with reversed colors */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(90deg, #a6a6a6, #ffffff);
+    position: relative;
+}
+
+/* Image styling for logonew.svg */
+.responsive-image {
+    position: absolute;
+    width: calc(308.9 / 1920 * 100vw); /* Maintain the ratio relative to 1920px width */
+    height: auto; /* Maintain aspect ratio */
+    top: calc(39.1 / 1080 * 100vh); /* Maintain position from top relative to 1080px height */
+    left: calc(1069.1 / 1920 * 100vw); /* Maintain position from left relative to 1920px width */
+}
+
+/* Image styling for logoicon.png */
+.logo-icon {
+    position: absolute;
+    width: calc(89 / 1920 * 100vw); /* Maintain the ratio relative to 1920px width */
+    height: auto; /* Maintain aspect ratio */
+    top: calc(68.9 / 1080 * 100vh); /* Maintain position from top relative to 1080px height */
+    left: calc(1423.5 / 1920 * 100vw); /* Maintain position from left relative to 1920px width */
+}
+
+/* New rectangular box styling (first box) */
+.new-rectangular-box {
+    position: absolute;
+    width: calc(129.8 / 1920 * 100vw); /* Maintain ratio relative to 1920px width */
+    height: calc(129.8 / 1920 * 100vw * 43.1 / 129.8); /* Maintain aspect ratio of the box (129.8px / 43.1px) */
+    top: calc(86.5 / 1080 * 100vh); /* Position from top */
+    left: calc(71 / 1920 * 100vw); /* Position from left */
+    background: linear-gradient(90deg, #ffffff, #a6a6a6);
+    border-radius: calc(11 / 1920 * 100vw); /* Maintain border-radius relative to 1920px width */
+    opacity: 0.7; /* Apply 70% opacity */
+}
+
+/* Text inside the first box */
+.new-rectangular-box-text {
+    position: absolute;
+    top: 50%; /* Centers text vertically */
+    left: 50%; /* Centers text horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the position to exactly center the text */
+    font-family: 'Canva Sans', sans-serif; /* Use Canva Sans font */
+    font-size: calc(25 / 1920 * 100vw); /* Set font size relative to the screen width */
+    text-decoration: none; /* Remove underline */
+    color: #000000; /* Text color */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* New rectangular box styling (second box) */
+.new-rectangular-box-2 {
+    position: absolute;
+    width: calc(257.1 / 1920 * 100vw); /* Maintain ratio relative to 1920px width */
+    height: calc(257.1 / 1920 * 100vw * 43.1 / 257.1); /* Maintain aspect ratio of the box (257.1px / 43.1px) */
+    top: calc(86.5 / 1080 * 100vh); /* Same top position */
+    left: calc((71 + 129.8 + 45) / 1920 * 100vw); /* Adjust left position based on first box */
+    background: linear-gradient(90deg, #ffffff, #a6a6a6);
+    border-radius: calc(11 / 1920 * 100vw); /* Maintain border-radius relative to 1920px width */
+    opacity: 0.7; /* Apply 70% opacity */
+}
+
+/* New rectangular box styling (third box) */
+.new-rectangular-box-3 {
+    position: absolute;
+    width: calc(183.4 / 1920 * 100vw); /* Maintain ratio relative to 1920px width */
+    height: calc(183.4 / 1920 * 100vw * 43.1 / 183.4); /* Maintain aspect ratio of the box (183.4px / 43.1px) */
+    top: calc(86.5 / 1080 * 100vh); /* Same top position */
+    left: calc((547.9) / 1920 * 100vw); /* Adjust left position based on given x value */
+    background: linear-gradient(90deg, #ffffff, #a6a6a6);
+    border-radius: calc(11 / 1920 * 100vw); /* Maintain border-radius relative to 1920px width */
+    opacity: 0.7; /* Apply 70% opacity */
+}
+
+/* New rectangular box styling (fourth box) */
+.new-rectangular-box-4 {
+    position: absolute;
+    width: calc(148.9 / 1920 * 100vw); /* Maintain ratio relative to 1920px width */
+    height: calc(148.9 / 1920 * 100vw * 43.1 / 148.9); /* Maintain aspect ratio of the box (148.9px / 43.1px) */
+    top: calc(86.5 / 1080 * 100vh); /* Same top position */
+    left: calc((776.3) / 1920 * 100vw); /* Adjust left position based on given x value */
+    background: linear-gradient(90deg, #ffffff, #a6a6a6);
+    border-radius: calc(11 / 1920 * 100vw); /* Maintain border-radius relative to 1920px width */
+    opacity: 0.7; /* Apply 70% opacity */
+}
+
+/* Hover box styling */
+.hover-box {
+    display: none; /* Initially hidden */
+    position: absolute;
+    width: calc(200 / 1920 * 100vw); /* Adjust width */
+    background: #000000; /* Change background color to black */
+    border-radius: calc(11 / 1920 * 100vw); /* Maintain border-radius */
+    padding: 10px; /* Add some padding */
+    z-index: 10; /* Ensure it appears above other elements */
+    margin-top: 5px; /* Space between the text and the hover box */
+    top: 100%; /* Position the hover box below the text */
+    left: 0; /* Align the hover box with the left edge of the pricing text */
+}
+
+/* Arrow styling */
+.arrow {
+    position: absolute;
+    top: -10px; /* Position above the hover box */
+    left: 20%; /* Center the arrow */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Left side of the arrow */
+    border-right: 10px solid transparent; /* Right side of the arrow */
+    border-bottom: 10px solid #000000; /* Bottom side of the arrow (black) */
+}
+
+/* Text inside the hover box */
+.hover-box-text {
+    display: block; /* Stack vertically */
+    color: #ffffff; /* Change text color to white */
+    text-decoration: none; /* Remove underline */
+    margin: 5px 0; /* Space between items */
+    font-family: 'Canva Sans', sans-serif; /* Use Canva Sans font */
+    font-size: calc(20 / 1920 * 100vw); /* Set font size relative to the screen width */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Add hover effect for the pricing plan links */
+.hover-box-text:hover {
+    color: #0030f9; /* Change color on hover */
+}
+
+/* Pricing text styling */
+.pricing-text {
+    color: #000000; /* Default text color */
+    font-family: 'Canva Sans', sans-serif; /* Use Canva Sans font */
+    font-size: calc(25 / 1920 * 100vw); /* Set font size relative to the screen width */
+    text-decoration: none; /* Remove underline */
+}
